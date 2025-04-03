@@ -6,3 +6,6 @@ telebot
 selenium
 playwright
 xml.etree.ElementTree
+psycopg2-binary
+dash
+plotly
