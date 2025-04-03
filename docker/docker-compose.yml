@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  parser:
+    build: .
+    container_name: price_parser
+    volumes:
+      - ./main_folder:/app/main_folder
+      - ./parsers_output:/app/parsers_output
+      - ./history:/app/history
+      - ./analysis:/app/analysis
+    environment:
+      - SERVER=10.10.10.26  # или 10.77.77.6 в зависимости от конфигурации
+      - DATABASE=datahouse
+      - USERNAME=bogdanov
+      - PASSWORD=hLa4m95S
+      - TELEGRAM_TOKEN=7241309695:AAGblw7UNVejMafbtftgEl97lRq5zKWj2SE
+      - TELEGRAM_USER_ID=467688891
+    networks:
+      - parser_network
+
+networks:
+  parser_network:
+    driver: bridge
