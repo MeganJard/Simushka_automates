@@ -1,0 +1,8 @@
+pandas
+pygsheets
+pyodbc
+sqlalchemy
+telebot
+selenium
+playwright
+xml.etree.ElementTree
